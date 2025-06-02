@@ -1,0 +1,13 @@
+[Unit]
+Description=Run wd__main_cycle.py at boot
+After=network.target
+
+[Service]
+Type=simple
+User=bjorn
+WorkingDirectory=/home/bjorn/Desktop/wd__directory
+ExecStart=/usr/bin/python3 /home/bjorn/Desktop/wd__directory/wd__main_cycle.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
